@@ -14,8 +14,7 @@ def client_left(client, server):
 
 # Called when a client sends a message
 def message_received(client, server, message):
-	print("Client(%d) meta-data: %s" % (client['id'], message.metadata))
-	print("Client(%d) content: %s" % (client['id'], message.content))
+	print("Client(%d) sent: %s" % (client['id'], message))
 
 PORT=9500
 server = WebsocketServer(PORT)
